@@ -1,0 +1,22 @@
+<div class="content">
+<h2>User Dashboard</h2>
+
+    <button mat-raised-button color="primary" (click)="openAddUserDialog()">
+      Add User
+    </button>
+
+    <div *ngIf="isLoading" class="loader-wrapper">
+    <mat-spinner diameter="60"></mat-spinner>
+  </div>
+
+  <div [class.hidden]="isLoading">
+     <app-user-table [users]="users$ | async"></app-user-table>
+
+    <ng-template #chartHost></ng-template>
+  </div>
+
+   
+
+
+
+</div>

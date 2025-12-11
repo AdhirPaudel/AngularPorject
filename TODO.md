@@ -1,0 +1,2 @@
+- [x] Update dashboard.component.ts to add a local users property and subscribe to users$
+- [ ] Update dashboard.component.html to pass the local users in inputs instead of users$ | async
