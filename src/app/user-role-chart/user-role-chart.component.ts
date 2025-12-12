@@ -49,7 +49,6 @@ export class UserRoleChartComponent implements AfterViewInit, OnChanges {
   }
 
   private renderChart(Chart: any) {
-    console.log(this.users)
     if (!this.users || this.users.length === 0) return;
 
     const ctx = this.chartRef.nativeElement?.getContext('2d');
@@ -70,7 +69,6 @@ export class UserRoleChartComponent implements AfterViewInit, OnChanges {
       Editor: this.users.filter(u => u.role === 'Editor').length,
       Viewer: this.users.filter(u => u.role === 'Viewer').length
     };
-    console.log(counts);
 
     this.chart = new Chart(ctx, {
       type: 'pie',

@@ -8,7 +8,7 @@ import { MatPaginator } from '@angular/material/paginator';
   templateUrl: './user-table.component.html',
   styleUrls: ['./user-table.component.scss']
 })
-export class UserTableComponent implements OnInit {
+export class UserTableComponent {
   dataSource = new MatTableDataSource<User>();
   columns = ['name', 'email', 'role'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -19,9 +19,6 @@ export class UserTableComponent implements OnInit {
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
-  }
-  ngOnInit(): void {
-    console.log("user-table method")
   }
 
 }
